@@ -1,0 +1,2978 @@
+ // <-========================================================Global Front End========================================================->
+
+  .section_title{
+    color: $my_portfolio_section_title_color!important;
+  }
+  
+  .section_sub_title{
+    color:  $my_portfolio_section_sub_title_color!important;
+  }
+
+  .title{
+    
+    color: $my_portfolio_section_title_color;
+  }
+  .sub_title{
+    color: $my_portfolio_section_title_color;
+  }
+ 
+  .text-highlight{
+    color: $my_portfolio_card_title_color!important;
+  }
+
+  .card-title{
+   color: $my_portfolio_card_title_color!important;
+  }
+
+  @media screen and (max-width: 767.9px) {
+
+    .my-portfolio-title-box{
+      margin: 0 auto 2rem !important;
+    }
+
+    .section_title{
+      font-size: 1.5rem !important;
+    }
+
+    .section_sub_title{
+      font-size: 1.35rem !important;
+    }
+
+    .title{
+      font-size: 1.35rem !important;
+      margin-bottom: 1rem !important;
+    }
+
+    .sub_title{
+      font-size: 1.25rem !important;
+      margin-bottom: 1rem !important;
+    }
+
+    p.description{
+      font-size: 1rem !important;
+    }
+   
+    .card-title{
+      font-size: 1.125rem !important;
+    }
+    .card-text{
+      font-size: 1rem !important;
+    }
+  }
+
+  @media screen and (max-width: 575.98px) { 
+    .my-portfolio-title-box{
+      margin: 0 auto 2rem !important;
+    }   
+    
+    .section_title{
+      font-size: 1.35rem !important;
+    }
+
+    .section_sub_title{
+      font-size: 1.25rem !important;
+    }
+
+    .title{
+      font-size: 1.25rem !important;
+      margin-bottom: 1rem !important;
+    }
+    .sub_title{
+      font-size: 1.125rem !important;
+      margin-bottom: 1rem !important;
+    }
+
+    p.description{
+      font-size: 1rem !important;
+    }
+    .card-title{
+      font-size: 1.25rem !important;
+    }
+    .card-text{
+      font-size: 1rem !important;
+    }
+     
+  }
+
+  @media screen and (max-width: 299.98px) { 
+    .section_title{
+      font-size: 1.35rem !important;
+    }
+    .section_sub_title{
+      font-size: 1.25rem !important;
+    }
+    .title{
+      margin-bottom: 0.75rem !important;
+    }
+    .sub_title{
+      margin-bottom: 0.5rem !important;
+    }
+  
+  }
+
+  @media screen and (min-width: 768px) {
+
+    .my-portfolio-title-box{
+      margin: 0 auto 3rem;
+    }
+
+    .section_title{
+      font-size: 1.7rem !important;
+    }
+
+    .section_sub_title{
+      font-size: 1.5rem !important;
+    }
+
+    .title{
+      font-size: 1.35rem !important;
+      margin-bottom: 1.125rem !important;
+    }
+    .sub_title{
+      font-size: 1.25rem !important;
+      margin-bottom: 1rem !important;
+    }
+
+    p.description{
+      font-size: 1rem !important;
+    }
+
+    .card-title{
+      font-size: 1.125rem !important;
+      margin-bottom: 0.75rem !important;
+    }
+    .card-text{
+      font-size: 1rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+
+    .my-portfolio-title-box{
+      margin: 0 auto 3rem;
+    }
+
+    .section_title{
+      font-size: 1.75rem !important;
+    }
+
+    .section_sub_title{
+      font-size: 1.5rem !important;
+    }
+
+    .title{
+      font-size: 1.5rem !important;
+      margin-bottom: 1.25rem !important;
+    }
+    .sub_title{
+      font-size: 1.25rem !important;
+      margin-bottom: 1rem !important;
+    }
+
+    p.description{
+      font-size: 1rem !important;
+    }
+
+    .card-title{
+      font-size: 1.25rem !important;
+      margin-bottom: 0.75rem !important;
+    }
+    .card-text{
+      font-size: 1.125rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+  }
+
+  .my-portfolio-loading{
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 1);
+    z-index: 6000;
+  }
+
+  .my-portfolio-scroll-down-box{
+    display: block;
+    position: relative;
+    z-index: 9990;
+    .scroll-down{
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      span{
+        font-size: 1.25rem;
+        margin-left: 0.25rem;
+      }
+      .mouse-icon{
+        font-size: 1.25rem;
+      }
+      .down-arrow-icon{
+        font-size: 1.5rem;
+        animation: signItemSignel 1s ease-in-out 1s infinite alternate;;
+      }
+    }
+    .scroll-down:hover{
+      .down-arrow-icon{
+        animation-play-state: paused;
+      }
+    }
+
+    @media screen and (max-width: 767.98px) { 
+      .scroll-down{
+        span{
+          font-size: 1.125rem;
+        }
+        .mouse-icon{
+          font-size: 1.125rem;
+        }
+        .down-arrow-icon{
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 575.98px) { 
+      .scroll-down{
+        span{
+          font-size: 1rem;
+        }
+        .mouse-icon{
+          font-size: 1rem;
+        }
+        .down-arrow-icon{
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .my-portfolio-title-box{
+    padding: 0.25rem 1.5rem;
+    position: relative;
+    width: fit-content;
+    
+    .title-line{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 5px;
+      width: 70%;
+      background-color: lighten($color: $my_portfolio_section_title_color, $amount: 35%);
+    }
+
+    @media screen and (max-width: 767.9px) {
+      margin-bottom: 2rem !important;
+    }
+
+  }
+
+  .image-box-background{
+    width: fit-content;
+    height: 100%;
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .my-portfolio-ovelay-box{
+    position: relative;
+    .my-portfolio-ovelay{
+      cursor: pointer;
+      z-index: 999;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: clip-path 0.5s ease-in;
+      -webkit-clip-path: ellipse(0% 0% at 0% 0%);
+      clip-path: ellipse(0% 0% at 0% 0%);
+      .eye{
+        transition: clip-path 0.5s ease-in;
+        position: relative;
+      }
+      .my-portfolio-tooltip{
+        border-radius: 0.5rem; 
+        border: thin solid;
+        visibility: hidden;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        padding: 0.5rem;
+        display: inline-block;
+        width: fit-content;
+        white-space: nowrap;
+
+      }
+      .my-portfolio-tooltip::after {
+        content: " ";
+        position: absolute;
+        top: 100%; /* At the bottom of the tooltip */
+        left: 50%;
+        transform: translateY(0%);
+        margin-left: -8px;
+        border-width: 8px;
+        border-style: solid;
+      }
+
+    }
+  }
+
+  .my-portfolio-ovelay-box:hover .my-portfolio-ovelay,
+  .my-portfolio-ovelay-box:focus .my-portfolio-ovelay,
+  .my-portfolio-ovelay-box:focus-visible .my-portfolio-ovelay
+  {
+    -webkit-clip-path: ellipse(130% 160% at 0% 0%);
+    clip-path: ellipse(150% 160% at 0% 0%);
+    .eye:hover{
+      color: $my_portfolio_button_text_color_hover;
+    }
+    .eye:hover .my-portfolio-tooltip{
+      visibility: visible;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+   a:focus-visible
+   {
+    outline: 2px solid #0077b5 !important;
+    outline-offset: 2px;
+  }
+
+  a{
+    padding: 0.25rem 0.75rem;
+    border: none;
+  }
+  
+//Portfolio Card
+  .my-portfolio-card{
+    border-radius: 0.25rem;
+    min-height: 100%; 
+    overflow: hidden;
+    cursor: pointer;
+    .image-box-background{
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+      min-width: 100%;
+      height: 100px;
+      padding: 5px;
+      img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .card-body{
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    @media screen and (max-width: 767.9px) {
+      display: flex;
+      flex-direction: row;
+      .image-box-background{
+        min-width: auto;
+        max-width: 20%;
+        height: auto;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .card-body{
+        padding: 0.5rem 0.5rem 0.5rem 2rem;
+      }
+    }
+
+  }
+
+//Swiper Button
+  .my_portfolio_swiper{
+    position: relative;
+    .my-portfolio-swiper-button{
+      position: absolute;
+      top: 50%;
+      z-index: 999;
+    }
+    .swiper-button-next::after, 
+    .swiper-button-prev::after{
+      font-size: 1.5rem;
+    }
+    .my-portfolio-swiper-button:hover{
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+
+    .my-portfolio-swiper-button:focus-visible{
+      z-index: 9999;
+      outline: 3px solid #0077b5 !important;
+      outline-offset: 2px;
+    }
+    .my-portfolio-swiper-button.next{
+      right: 0;
+    }
+    .my-portfolio-swiper-button.prev{
+      left: 0;
+    }  
+  }
+
+//Social Media Box
+  .my-portfolio-social-media-box{
+    display: flex;
+    align-content: center;
+    .social-media{ 
+      .icon{
+        margin-left: 0.5rem;
+        padding: 0.25rem;
+        transition: all 0.3s;
+        cursor: pointer;
+        a{
+          font-size: 1.75rem;
+        }
+      }
+      .facebook a{
+        color: #3b5998;
+      }
+      .instagram a{
+        color: #fb3958;
+      }
+      .linkedin a{
+        color:#0077b5;
+      }
+      .youtube a{
+        color:#c4302b;
+      }
+    }
+    transition: all 1s ease-in 0.25s;
+  }
+ 
+// <-========================================================Global Animation Setting up========================================================->
+
+  @keyframes signItemSignel{
+    0%{color: inherit}
+    50%{ color: rgb(232, 144, 29); transform: scale(1.25);}
+    75%{ color: rgb(216, 41, 79);transform: translateY(10%)}
+    100%{ color: inherit; transform: scale(1);} 
+  }
+
+  @keyframes showUp{
+    0%{opacity: 0; transform: scale(0.5);}
+    100%{opacity: 1; transform: scale(1);}
+  }
+
+  @keyframes slideDown{
+    0%{opacity: 0; height: 0;}
+    100%{opacity: 1; height: 100%;}
+  }
+
+// <-========================================================Nav Menu========================================================->
+  #my_portfolio_header_front_end{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: start;
+    .my-portfolio-nav-cover{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9998;
+      display: none;
+    }
+    .my-portfolio-nav-cover.display{
+      display: block;
+    }
+    .container-lg{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .nav-item{
+        padding: 0.25rem 1.5rem;
+        border-radius: 0px;
+        margin-bottom: 0.75rem;
+        cursor: pointer;
+        border-bottom: dashed thin;
+      }
+
+      .navbar-brand{
+        margin-right: 0.5rem;
+        .navbar-brand-logo-box{
+          width: 100px;
+          height: 60px;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img{
+              width: 100%;
+              object-fit: cover;
+          }
+        }
+
+        h4{
+          padding:0.5rem;
+          margin-bottom: 0 !important;
+        }
+      }
+
+      .my-portfolio-nav-content{
+        position: fixed;
+        top: 0;
+        left: -200%;
+        opacity: 0;
+        z-index: 9999;
+        min-width: 240px;
+        min-height: 100%;
+        transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        .my-portfolio-nav-header{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 0.5rem 0 0.5rem 0.5rem;
+          margin-bottom: 1.5rem;
+          position: relative;
+          .navbar-close-button{
+            width: 2rem;
+            height: 2rem;
+            font-size: 1.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+          }
+        }        
+        .nav-item.my-portfolio-user-accordion{
+          display: flex; 
+          flex-direction: column;
+          padding: 0.25rem 0.5rem 0.5rem 1.5rem;
+          .nav-link{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .chevron-down{
+              transform: rotate(0deg);
+              transition: transform 0.5s ease-out;
+            }
+          }
+          .user-accordion-menu{
+            opacity: 0;
+            overflow: hidden;
+            li a{
+              text-decoration: none;
+            }
+            .user-accordion-item{
+              margin-bottom: 0.5rem;
+              border-bottom: dashed thin;
+              padding: 0.25rem;
+              cursor: pointer;
+            }
+            transition: height 0.5s ease-out, opacity 0.5s ease-out;
+          }
+          
+        }
+        .nav-item.my-portfolio-user-accordion.slide-down{
+          .nav-link{
+            .chevron-down{
+              transform: rotate(180deg);
+            }
+          }
+          .user-accordion-menu{
+            opacity: 1;
+            
+          }
+        }
+      }
+
+      .my-portfolio-nav-content.display{
+        left: 0%;
+        opacity: 1;
+      }
+
+      .my-portfolio-nav-right{
+        display: flex;
+        flex-direction: row;
+        .my_portfolio_dropdown{
+          position: relative;
+          .dropdown-toggle{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+          }
+          .my_portfolio_dropdown_menu{
+            position: absolute;
+            right: 0;
+            top: 140%;
+            z-index: 999;
+            width: 100%;
+            min-width: 120px;
+            margin: 0;
+            padding: 0;
+            display: none;
+            li.dropdown-item{
+              padding: 0.25rem 1rem;
+              margin-bottom: 0.5rem;
+              a{
+                text-decoration: none;
+              }
+            }
+
+            .my_portfolio_dropdown_divider{
+              height: 0.25px;
+            }
+          }
+
+          .my_portfolio_dropdown_menu.drop-down{
+            display: block;
+          }
+        }
+        .my_portfolio_dropdown.user{
+          display: none;
+        }
+        .nav-item{
+          padding: 0.25rem 0.5rem;
+          border-radius: 0px;
+          margin-bottom: 0rem;
+          margin-right: 0.25rem;
+          cursor: pointer;
+          border-bottom: none;
+        }
+        .my-portfolio-toggler-button{
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 0.5rem;
+          border: thin solid;
+          border-radius: 0.25rem;
+          span{
+            font-size: 2.25rem;
+          }
+        }
+      }
+
+      .my-portfolio-nav-content.display{
+        left: 0%;
+      }
+
+      @media screen and (min-width: 568px){
+        .my-portfolio-nav-content{
+          .nav-item.my-portfolio-user-login-accordion{
+            display: none;
+          }
+          .nav-item.my-portfolio-user-accordion{
+            display: none;
+          }
+        }
+        .my-portfolio-nav-right{
+          .my_portfolio_dropdown.user{
+            display: block;
+          }
+          .my-portfolio-toggler-button.nav-item{
+            margin-left: 3rem;
+          }
+
+        }
+      }
+    }
+    .disable-nav-item{
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .navbar-brand:hover h4,
+    .navbar-brand:focus h4{
+      z-index: 9999;
+      outline: 3px solid #0077b5 !important;
+      outline-offset: 2px;
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    #my_portfolio_header_front_end{
+      .container-lg{
+        .my-portfolio-nav-content{
+          
+        }
+
+      }  
+    }
+  }
+
+  @media screen and (min-width: 992px){
+    #my_portfolio_header_front_end{
+      .container-lg{
+        .nav-item{
+          padding: 0.25rem 0.5rem;
+          border-radius: 0px;
+          margin-bottom: 0rem;
+          margin-right: 0.25rem;
+          cursor: pointer;
+          border-bottom: none;
+        }
+
+        .nav-item.active .nav-link{
+          border-bottom: 3px solid;
+        }
+
+        .my-portfolio-nav-content{
+          position: static !important;
+          opacity: 1;
+          display: flex;
+          .my-portfolio-nav-header{
+            display: none;
+          } 
+
+          background-color: transparent !important;
+          min-width: auto;
+          min-height: auto;
+          .navbar-nav{
+            display: flex;
+            flex-direction: row;
+          }
+        }
+        .my-portfolio-nav-right{
+          .my-portfolio-toggler-button{
+           display: none;
+          }
+        }
+  
+      }  
+    }
+  }
+
+  #my_portfolio_header_front_end.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    scroll-snap-align: none;
+  }
+
+// <-========================================================Header Section========================================================->
+  .my-portfolio-swiper-wrapper{
+    .my_portfolio_swiper{
+      width: 100%;
+      height: calc(100vh - 60px);
+      .my-portfolio-swiper-slide{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 960;
+        .my-portfolio-slider-box{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .container-lg {  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .information{
+              max-width: 100%;
+              padding: 1rem;
+              z-index: 980;
+              text-align: center;
+              .title{
+                margin-bottom: 0.75rem;
+              }
+              .sub_title{
+                margin-bottom: 0.5rem;
+              }
+
+              div.description a{
+                text-decoration: underline !important;
+              }
+
+              a .my-portfolio-button{
+                margin-top: 1rem;
+              }
+            }
+
+          }
+        }
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 950;
+          opacity: 0.7;
+        }
+      }
+    }
+    .my-portfolio-no-slider-box{
+      min-width: 100%;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0077b5;
+    }
+
+    @media screen and (min-width: 568px) { 
+      .my_portfolio_swiper{ 
+        .my-portfolio-swiper-slide{
+          .my-portfolio-slider-box{
+            .container-lg { 
+              .information{
+                .title{
+                  margin-bottom: 0.75rem;
+                }
+              }
+            }
+          }
+          img{
+            object-position: 100% 0%;
+          } 
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) { 
+      .my_portfolio_swiper{ 
+        height: calc(75vh - 60px);
+        .my-portfolio-swiper-slide{
+          .my-portfolio-slider-box{
+            display: flex;
+            align-items: center;
+            padding-left: 2.5rem;
+            .container-lg { 
+              justify-content: flex-start;
+              .information{
+                text-align: start;
+                max-width: 40%;
+              }
+            }
+          } 
+          img{
+            width: auto;
+            height: 96%;
+            object-fit: cover;
+            position: absolute;
+            right: 0;
+            top: 2%;
+          }
+        }
+       
+      }
+    }
+    @media screen and (min-width: 992px) { 
+      .my_portfolio_swiper{ 
+        height: calc(100vh - 60px);
+        .my-portfolio-swiper-slide{
+          .my-portfolio-slider-box{
+            .container-lg { 
+              position: relative;
+              top: -15%; 
+              .information{
+                max-width: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes card-left{
+    0%{opacity: 0; transform: translateX(-200%);}
+    100%{opacity: 1; transform: translateX(0%);}
+  }
+  @keyframes card-bottom{
+    0%{opacity: 0; transform: translateY(200%);}
+    100%{opacity: 1; transform: translateY(0%);}
+  }
+  @keyframes scroll-down-bottom{
+    0%{opacity: 0; transform: translateY(200%);}
+    100%{opacity: 1; transform: translateY(0%);}
+  }
+  @keyframes card-right{
+    0%{opacity: 0; transform: translateX(200%);}
+    100%{opacity: 1; transform: translateX(0%);}
+  }
+  .my_portfolio_section.service{
+    z-index: 980;
+    padding: 1rem;
+    scroll-snap-align: start;
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .content{
+        padding: 0rem;
+        min-width: 100%;
+        .sub_title-box{
+          margin-bottom: 1.75rem;
+          padding: 0.25rem 1.5rem 0.25rem 0;
+          position: relative;
+          width: fit-content;
+          .sub_title-line{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 4px;
+            width: 80%;
+            background-color:  lighten($color:$my_portfolio_section_sub_title_color, $amount: 35%);
+          }
+        }
+
+        .my-portfolio-card{  
+          min-height: 100%;
+          position: relative;
+          min-height: 120px;
+          .image-box-background{
+            min-width: auto;
+            max-width: 20%;
+            height: auto;
+            padding: 5px;
+            img{
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          .card-body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+            .card-title{
+            text-align: center;
+            margin: 0;
+            }
+          }    
+        }
+
+        .my-portfolio-scroll-down-box{
+          width: 100%;
+          margin-top: 1rem !important;
+          display: flex;
+          justify-content: flex-start;
+        }
+
+        .card-number-1{ 
+          opacity: 0; transform: translateX(-200%);
+        }
+
+        .card-number-2{    
+          opacity: 0; transform: translateX(200%);
+        }
+
+        .card-number-3{
+          opacity: 0; transform: translateX(-200%);
+        }
+
+        .card-number-4{    
+          opacity: 0; transform: translateX(200%);
+        }
+
+        .my-portfolio-scroll-down-box{
+          opacity: 0; transform: translateY(200%);
+        }
+
+        .card-number-1.show-card{
+          transition: all 0.5s ease-in;
+          opacity: 1; transform: translateX(0%);
+        }
+
+        .card-number-2.show-card{    
+          transition: all 0.75s ease-in;
+          opacity: 1; transform: translateX(0%);
+        }
+        .card-number-3.show-card{
+          transition: all 1s ease-in;
+          opacity: 1; transform: translateX(0%);
+        }
+
+        .card-number-4.show-card{    
+          transition: all 1.25s ease-in;
+          opacity: 1; transform: translateX(0%);
+        }
+
+        .my-portfolio-scroll-down-box.show-card{
+          transition: all 1.35s ease-in;
+          opacity: 1; transform: translateY(0%);
+        }
+      }
+    } 
+    @media screen and (max-width: 299.98px) { 
+      .container{
+        padding: 0.5rem;
+        .content{
+          .sub_title-box{
+            margin-bottom: 1.5rem;
+            padding: 0.25rem 1.5rem 0.25rem 0;
+            position: relative;
+            width: fit-content;
+            h5{
+              color:  $my_portfolio_section_sub_title_color;
+              font-size: 1.25rem;
+            }
+            .sub_title-line{
+              height: 3px;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 768px) { 
+      padding: 1rem 0;
+      margin-bottom: 0 !important;
+      scroll-snap-align: none;
+      .container{ 
+        .content{
+          .my-portfolio-card{  
+            .image-box-background{
+              min-width: 100%;
+              height: 100px;
+              padding: 5px;
+              img{
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+            .card-body{
+              height: 70px;
+            }
+          }  
+          .card-number-1{ 
+            animation: card-left 1s ease-in; 
+            opacity: 1; transform: translateX(0%);
+          }
+          .card-number-2{    
+            animation: card-right 1s ease-in;
+            opacity: 1; transform: translateX(0%);
+          }
+          .card-number-3{
+            opacity: 0; transform: translateX(-200%);
+          }
+
+          .card-number-4{    
+            opacity: 0; transform: translateX(200%);
+          }
+
+          .my-portfolio-scroll-down-box{
+            opacity: 0; transform: translateY(200%);
+          }
+
+          .card-number-3.show-card{
+            transition: all 0.5s ease-in;
+            opacity: 1; transform: translateX(0%);
+          }
+
+          .card-number-4.show-card{    
+            transition: all 0.5s ease-in;
+            opacity: 1; transform: translateX(0%);
+          }
+
+          .my-portfolio-scroll-down-box.show-card{
+            transition: all 0.75s ease-in;
+            opacity: 1; transform: translateY(0%);
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 992px) {   
+        transform: translateY( calc(-100%) );
+        background-color: transparent !important;
+        .container{
+          .content{
+            .card-number-1{ 
+              animation: card-left 1s ease-in; 
+            }
+            .card-number-2{  
+              animation: card-bottom 1.25s ease-in;
+            }
+            .card-number-3{
+              opacity: 1; transform: translateX(0%);
+              animation: card-bottom 1.5s ease-in;
+            }
+            .card-number-4{    
+              opacity: 1; transform: translateX(0%);
+              animation: card-right 1.75s ease-in;
+            }
+            .my-portfolio-scroll-down-box{
+              opacity: 1; transform: translateY(0%);
+              animation: scroll-down-bottom 1.5s ease-in;
+            }
+          }
+        }
+    }
+  }
+
+// <-========================================================Home Section========================================================->
+  .my_portfolio_section.home .container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem;
+    min-height: 90vh;
+    scroll-snap-align: start;
+    .information{
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+      transition: all 1s ease-in 0.25s;
+      min-width:180px;
+      .my-portfolio-button{
+        z-index: 9990;
+      }
+    }
+    .avatar{
+      position: relative;
+      transition: all 1s ease-in;
+       min-width:180px;
+      .my-avatar{
+        width:180px;
+      }
+      .my-portfolio-avatar{
+        min-width:180px;
+      }
+    }
+    
+    .my-portfolio-social-media-box.left{
+      position: absolute;
+      top: 25%;
+      transform: translateY(-40%);
+      .social-media{
+        display: flex;
+        flex-direction: column;
+       }
+    }
+    .my-portfolio-social-media-box.bottom {
+      .social-media{
+        display: none;
+      }
+    }
+    @media screen and (max-width: 767.98px) {
+      .hide_home_left{
+        opacity: 0;
+        transform: translateY(200%);
+      }
+      .hide_home_right{
+        opacity: 0;
+        transform: translateY(-200%);
+      }
+      .hide_home_bottom{
+        opacity: 0;
+        transform: translateY(200%);
+      }
+      .show_home_left{
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      .show_home_right{
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      .show_home_bottom{
+        opacity: 1;
+        transform: translateY(0%);
+      }
+      .hide_home_right_absolute{
+        opacity: 0;
+        right: -100%;
+      }
+      .show_home_right_absolute{
+        opacity: 1;
+        right: 0%;
+      }
+     
+    }
+
+    @media screen and (min-width: 300px) {
+      .information{
+        min-width:220px;
+      }
+      .avatar{
+        min-width:220px;
+        .my-portfolio-avatar{
+          min-width: 220px;
+        }
+      } 
+      .my-portfolio-social-media-box.left{
+        .social-media{
+          display: flex;
+          flex-direction: column;
+        }
+        .social-media{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    @media screen and (min-width: 400px) {
+      .information{
+        min-width:240px;
+      }
+      .avatar{
+        min-width:240px;
+        .my-portfolio-avatar{
+          min-width: 240px;
+        }
+      } 
+      .my-portfolio-social-media-box.left{
+        .social-media{
+          display: flex;
+          flex-direction: column;
+        }
+       
+      }
+    }
+
+    @media screen and (min-width: 576px) {
+      padding: 1rem;
+      .information{
+        min-width:300px;
+      }
+      .avatar{
+        min-width:280px;
+        .my-portfolio-avatar{
+          width: 280px;
+        }
+      } 
+
+      .my-portfolio-social-media-box.left{
+        .social-media{
+          display: flex;
+          flex-direction: column;
+        }
+        .social-media{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {  
+      padding: 1rem;
+      .information{
+        min-width: 320px;
+      }  
+      .avatar{
+        min-width: 320px;
+        .my-portfolio-avatar{
+          width: 320px;
+        }
+      }
+      .my-portfolio-social-media-box.left{
+        display: none;
+      }
+      .my-portfolio-social-media-box.bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 15%;
+        .left-box{
+          .my-portfolio-scroll-down-box{
+            margin-top: 0rem;
+          }
+        }
+        .social-media{
+          display: flex;
+          flex-direction: row;
+          .icon:hover{
+            opacity: 0.8;
+            transform: translateY(-15px);
+          }
+        }
+        position: relative;
+      }
+      .hide_home_left{
+        opacity: 0;
+        transform: translateX(-200%);
+      }
+      .hide_home_right{
+        opacity: 0;
+        transform: translateX(200%);
+      }
+      .hide_home_bottom{
+        opacity: 0;
+        transform: translateY(200%);
+      }
+      .show_home_left{
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      .show_home_right{
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      .show_home_bottom{
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      .information{
+        min-width: 400px;
+        text-align: center;
+      }
+      .avatar{
+        min-width: 400px;
+        .my-portfolio-avatar{
+          width: 400px;
+        }
+      }
+      .my-portfolio-social-media-box.bottom{
+        padding-right: 0%;
+      }
+    }  
+
+    @media screen and (min-width:1200px) {
+      .information{
+        min-width: 500px;
+        text-align: center;
+      }
+      .avatar{
+        min-width: 500px;
+        .my-portfolio-avatar{
+          width: 500px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1400px) {
+      .information{
+        min-width: 500px;
+        text-align: center;
+      }
+      .avatar{
+        min-width: 500px;
+        .my-portfolio-avatar{
+          width: 500px;
+        }
+      } 
+    }
+  }
+
+//<-========================================================About Section========================================================->
+  .my_portfolio_section.about .container{  
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    min-height: 90vh;
+    padding: 0.5rem ;
+    padding-bottom: 2rem;
+    scroll-snap-align: start;
+    .content{
+      .introduction-box{
+        max-height: 90vh;
+        overflow: hidden;
+        .about-image-box{
+          border-radius: 1rem;
+          overflow: hidden;
+          margin: 0 auto;
+          max-width:200px;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0% 0%;
+          }
+          position: relative;
+          transition: all 1s ease-in;
+        }
+        .introduction{
+          border-bottom: solid thin;
+          text-align: center;
+          position: relative;
+          transition: all 1s ease-in 0.5s;
+          padding: 0.5rem;
+        }
+        .working-history{
+          display: none;
+          margin-top: 2rem;
+          .card-number-1{
+            position: relative;
+            transition: all 1s ease-in;
+          }
+
+          .card-number-2{
+            position: relative;
+            transition: all 1s ease-in 0.25s;
+          }
+
+          .card-number-3{
+            position: relative;
+            transition: all 1s ease-in 0.5s;
+          }
+        
+        }
+      }
+      .working-history-small{
+        display: block;
+        margin-top: 2rem;
+        .card-number-1{
+          position: relative;
+          transition: all 1s ease-in;
+        }
+
+        .card-number-2{
+          position: relative;
+          transition: all 1s ease-in 0.5s;
+        }
+
+        .card-number-3{
+          position: relative;
+          transition: all 1s ease-in 1s;
+        }
+      }
+    }
+    @media screen and (max-width: 767.98px) {
+      .hide_about_left{
+        opacity: 0;
+        transform: translateY(-200%);
+      }
+      .hide_about_right{
+        opacity: 0;
+        transform: translateY(200%);
+      }
+      .hide_about_bottom{
+        opacity: 0;
+        transform: translateY(200%);
+      }
+      .show_about_left{
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      .show_about_right{
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      .show_about_bottom{
+        opacity: 1;
+        transform: translateY(0%);
+      }
+
+    }  
+
+    @media screen and (min-width: 300px) {
+      .content{ 
+        .introduction-box{  
+
+          .about-image-box{
+            max-width:220px;
+          }
+          .introduction{
+            display: block;
+            margin: 0 auto;
+            max-width: 300px;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 576px) {
+      .content{   
+        .introduction-box{ 
+          .about-image-box{
+            min-width:320px;
+          } 
+          .introduction{
+            max-width: 500px;
+          }
+        } 
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 0rem;
+      .content{  
+        .introduction-box{ 
+          padding: 1rem;
+          .about-image-box{
+            min-width:280px;
+            img{
+              object-position: 20% 50%;
+            }
+          } 
+          .introduction{
+            text-align: left;
+            padding: 0rem 1rem 1rem 0;
+            margin-left: 1rem;
+            transition: all 1s ease-in 0.25s;
+          } 
+          .working-history{
+            margin-top: 1.5rem;
+            margin-left: 1rem;
+            display: block;
+            .card-number-1{
+              position: relative;
+              transition: all 1s ease-in 0.5s;
+            }
+
+            .card-number-2{
+              position: relative;
+              transition: all 1s ease-in 0.75s;
+            }
+
+            .card-number-3{
+              position: relative;
+              transition: all 1s ease-in 1s;
+            }
+          }
+        }
+        .working-history-small{
+          display: none;
+        }
+      }
+
+      .hide_about_left{
+        opacity: 0;
+        transform: translateX(-200%);
+      }
+      .hide_about_right{
+        opacity: 0;
+        transform: translateX(200%);
+      }
+      .hide_about_bottom{
+        opacity: 0;
+        transform: translateY(200%);
+      }
+      .show_about_left{
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      .show_about_right{
+        opacity: 1;
+        transform: translateX(0%);
+      }
+      .show_about_bottom{
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    @media screen and (min-width: 992px) { 
+      .content{  
+        .introduction-box{ 
+          .about-image-box{
+            min-width:350px;
+          }  
+        }
+      }
+    }
+
+    @media screen and (min-width: 1200px) { 
+      .content{  
+        .introduction-box{
+          .about-image-box{
+            min-width:400px;
+          }  
+          .introduction{
+            margin-left: 2rem;
+          } 
+          .working-history{
+            margin-top: 2rem;
+            margin-left: 2rem;
+          }
+  
+        } 
+      }
+    }
+
+  }
+
+//<-========================================================Skill Section========================================================->
+  .my_portfolio_section.skill .container{ 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1rem;
+    min-height: 90vh;
+    scroll-snap-align: start;
+    .content{
+      .my-portfolio-card{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: auto !important;
+        .card-skill-header{
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          .image-box-background{
+            min-width: 20%;
+            max-width: 20%;
+            height: auto;
+            border-bottom: none;
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          .card-body{
+            min-height: 120px;
+            padding-left: 1rem !important;
+            position: relative;
+           
+            .card-title{
+              margin-bottom: 0.25rem !important;
+            }
+            .my_portfolio_slide_down{
+              width: 1.25rem;
+              height: 1.25rem;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.125rem;
+              position: absolute;
+              bottom: 0;
+              left: 1rem;
+              animation: signItemSignel 1s ease-in-out 0.5s infinite;
+            }
+          }
+        }
+        .card-skill-body{
+          padding: 0;
+          .skill-item{
+             padding: 0.5rem;
+            .skill-item-content{
+              display: flex;
+              justify-content: space-between;
+              h5.cart-title{
+                font-weight: 400;
+                font-size: 1.12rem;
+              }
+            }
+            .skill-item-box{
+              height: 1.25rem;
+              min-width: 100%;
+              position: relative;
+              .skill-item-box-inner{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                background-color: $my_portfolio_card_title_color;
+              }
+            }
+          }
+          opacity: 0;
+          height: 0;
+          overflow: hidden;
+          transition: height 1s ease-out, opacity 1s ease-out;
+        }
+        .card-skill-body.active{
+          opacity: 1;
+          padding: 0.5rem;
+          height: 350px;
+        }
+      }
+      .card-number-1{
+        transition: all 1s ease-in;
+      }
+      .card-number-2{
+        transition: all 1s ease-in;
+      }
+      .card-number-3{
+        transition: all 1s ease-in;
+      }
+      .card-number-1{
+        opacity: 0;
+        transform: translateX(-200%);
+      }
+      .card-number-2{
+        opacity: 0;
+        transform: translateX(200%);
+      }
+      .card-number-3{
+        opacity: 0;
+        transform: translateY(200%);
+      }
+      .card-number-1.show_skill_left{
+        opacity: 1;
+        transform: translateY(0%);
+      }
+      .card-number-2.show_skill_bottom{
+        opacity: 1;
+        transform: translateY(0%);
+      }
+      .card-number-3.show_skill_right{
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+    @media screen and (min-width: 768px) { 
+      .content{
+        .my-portfolio-card{
+          .card-skill-header{
+            .image-box-background{
+              min-width: 30%;
+              max-width: 30%;
+            }
+          } 
+        }
+        .card-number-1{
+          opacity: 0;
+          transform: translateX(-200%);
+        }
+        .card-number-2{
+          opacity: 0;
+          transform: translateY(200%);
+        }
+        .card-number-3{
+          opacity: 0;
+          transform: translateX(200%);
+        }
+        .card-number-1.show_skill_left{
+          opacity: 1;
+          transform: translateY(0%);
+        }
+        .card-number-2.show_skill_bottom{
+          opacity: 1;
+          transform: translateY(0%);
+        }
+        .card-number-3.show_skill_right{
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+    }
+
+    @media screen and (min-width: 992px) { 
+      .content{
+        .my-portfolio-card{
+          .card-skill-header{
+            .image-box-background{
+              min-width: 25%;
+              max-width: 25%;
+            }
+          } 
+        }
+      }
+    }
+  }
+
+//<-========================================================Journey Section========================================================->
+  .my_portfolio_section.journey .container{ 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0.5rem;
+    min-height: 90vh;
+    scroll-snap-align: start;
+    .content{
+      width: 100%;
+      .card-journey-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+        .card-journey-header-item{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: fit-content;
+          padding: 1rem 1rem 0.5rem;
+          border-bottom: none;
+          border-radius: 0.5rem;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          border-bottom: 3px solid;
+          transition: all 1s ease-in;
+          .image-box-background{
+            max-width: 60px;
+            border-radius: 5px;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .card-body{
+            text-align: center;
+          }
+          //Portfolio Card
+          .my-portfolio-ovelay{
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            transition: all 0.3s;
+          }
+        }
+        .card-journey-header-item.active{
+          border-bottom-color: $my_portfolio_section_title_color;
+        }
+        .card-journey-header-item:hover {
+          .my-portfolio-ovelay{
+            width: 100%;
+          }
+        }
+        .card-journey-header-item-1{
+          opacity: 0;
+          transform: translateX(-300%);
+        }
+        .card-journey-header-item-2{
+          opacity: 0;
+          transform: translateX(300%);
+        }
+        .card-journey-header-item-1.show_journey_left{
+          opacity: 1;
+          transform: translateX(0%);
+        }
+        .card-journey-header-item-2.show_journey_right{
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+      .card-journey-body{
+        padding: 2rem 1rem 1rem;
+        position: relative;
+        .card-journey-item{
+          display: none;
+          .card-journey-item-wrapper{    
+            position: relative;
+            .card-journey-item-box{
+              .my-portfolio-card{
+                .card-body{
+                  .card-title{  
+                  }
+                }
+              }
+            }
+            .card-journey-item-box-blank{
+              display: none;
+            }
+            .my-portfolio-marker{
+              width: 1rem;
+              height: 1rem;
+              border-radius: 50%;
+              background-color: lighten($color: $my_portfolio_section_title_color, $amount: 35%);
+              position: absolute;
+              top: 0%;
+            }
+            .my-portfolio-marker-line{
+              width: 1px;
+              height: calc(100% - 1rem);
+              background-color: lighten($color: $my_portfolio_section_title_color, $amount: 35%);
+              position: absolute;
+              top: 1rem;
+            }
+          }
+          .card-journey-item-wrapper:not(:last-child){
+            padding-bottom: 2rem;
+          }
+
+        }  
+        .card-journey-item.even{
+          .card-journey-item-wrapper.even{
+            .my-portfolio-marker{
+              right: 0;
+              transform: translate(50%, 0);
+            }
+            .my-portfolio-marker-line{
+              right: 0;
+              transform: translate(50%, 0);
+            }
+          }
+          .card-journey-item-wrapper.odd{
+            .my-portfolio-marker{
+              right: 0;
+              transform: translate(50%, 0);
+            }
+            .my-portfolio-marker-line{
+              right: 0;
+              transform: translate(50%, 0);
+            }
+          }
+        }
+        .card-journey-item.odd{
+          .card-journey-item-wrapper.even{
+            .my-portfolio-marker{
+              left: 0;
+              transform: translate(-50%, 0);
+            }
+            .my-portfolio-marker-line{
+              left: 0;
+              transform: translate(-50%, 0);
+            }
+          }
+          .card-journey-item-wrapper.odd{
+            .my-portfolio-marker{
+              left: 0;
+              transform: translate(-50%, 0);
+            }
+            .my-portfolio-marker-line{
+              left: 0;
+              transform: translate(-50%, 0);
+            }
+          }
+        }
+        .card-journey-item.active{
+          display: block;
+          animation: showUp 1s;
+        }
+        opacity: 0;
+        transform: translateY(150%);
+        transition: all 1s ease-in 0.25s;
+      }
+      .card-journey-body.show_journey_bottom{
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+
+    @media screen and (max-width: 575.98px){
+      .content{
+        .card-journey-header{
+          .card-journey-header-item{
+            .image-box-background{
+              max-width: 50px;
+            }
+            .card-body{
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 1rem;
+      .content{
+        .card-journey-body{
+          .card-journey-item{
+            .card-journey-item-wrapper{
+              margin-bottom: 0rem;
+              .card-journey-item-box-blank{
+                  display: block;
+              }
+            }
+            .card-journey-item-wrapper:not(:last-child){
+              padding-bottom: 0rem;
+            }
+          }
+          .card-journey-item.even{
+            .card-journey-item-wrapper.even{
+              .my-portfolio-marker{
+                left: 50%;
+                transform: translate(-50%, 0);
+              }
+              .my-portfolio-marker-line{
+                left: 50%;
+                transform: translate(-50%, 0);
+              }
+            }
+            .card-journey-item-wrapper.odd{
+              .my-portfolio-marker{
+                left: 50%;
+                transform: translate(-50%, 0);
+              }
+              .my-portfolio-marker-line{
+                left: 50%;
+                transform: translate(-50%, 0);
+              }
+            }
+          }
+          .card-journey-item.odd{
+            .card-journey-item-wrapper.even{
+              .my-portfolio-marker{
+                left: 50%;
+                transform: translate(-50%, 0);
+              }
+              .my-portfolio-marker-line{
+                left: 50%;
+                transform: translate(-50%, 0);
+              }
+            }
+            .card-journey-item-wrapper.odd{
+              .my-portfolio-marker{
+                left: 50%;
+                transform: translate(-50%, 0);
+              }
+              .my-portfolio-marker-line{
+                left: 50%;
+                transform: translate(-50%, 0);
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+//<-========================================================Parallax Section========================================================->
+  .my_portfolio_section.parallax {
+    min-height: 60vh;
+    max-height: 60vh;
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    margin-bottom: 0 !important;
+    scroll-snap-align: start;
+    .container{
+      .information{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+    }
+  
+  }
+
+//<-========================================================Contact Section========================================================->
+  .my_portfolio_section.contact .container{ 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1rem;
+    min-height: 90vh;
+    scroll-snap-align: start;
+    .content{
+      width: 100%;
+      .contact-informarion-box{
+        margin: 0 auto;
+        max-width: 500px;
+        .contact-informarion-item{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            position: relative;
+            .image-box-background{
+              min-width: 25%;
+              max-width: 25%;
+              height: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              i{
+                font-size: 2rem;
+              }
+            }
+            .card-body{
+              padding: 0.5rem 1rem 0;
+              .card-title{
+                margin-bottom: 1rem;
+              }
+              .card-text{
+                margin-bottom: 0.75rem !important;
+              }
+            }
+            
+        }
+        padding-bottom: 2rem;
+
+        .contact-informarion-item.phone{
+          opacity: 0;
+          transform: translateX(-200%);
+          transition: all 1s ease-in ;
+        }
+        .contact-informarion-item.email{
+          opacity: 0;
+          transform: translateX(200%);
+          transition: all 1s ease-in 0.25s;
+        }
+        .contact-informarion-item.address{
+          opacity: 0;
+          transform: translateX(-200%);
+          transition: all 1s ease-in 0.5s;
+        }
+
+        .contact-informarion-item.phone.show_contact_left{
+          opacity: 1;
+          transform: translateX(0%);
+        }
+        .contact-informarion-item.email.show_contact_left{
+          opacity: 1;
+          transform: translateX(0%);
+        }
+        .contact-informarion-item.address.show_contact_left{
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+      .contact-form-box{
+        padding: 1rem 1.5rem;
+        margin: 0 auto;
+        max-width: 500px;
+        border-radius: 0.5rem;
+        opacity: 0;
+        transform: translateY(200%);
+        transition: all 1s ease-in;
+        .contact-form-title{
+          display: block;
+          width: fit-content;
+          margin-bottom: 1rem;
+          p{
+            font-style: oblique;
+            font-size: 1.15rem;
+          }
+        }
+      }
+      .contact-form-box.show_contact_bottom{
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+    @media screen and (min-width: 768px){
+      .content{
+        width: 100%;
+        .contact-informarion-box{
+          .contact-informarion-item.email{
+            opacity: 0;
+            transform: translateX(-200%);
+            transition: all 1s ease-in 0.25s;
+          }
+        }
+        .contact-form-box{
+          opacity: 0;
+          transform: translateX(200%);
+          transition: all 1s ease-in;
+        }
+        .contact-form-box.show_contact_right{
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+    }
+    @media screen and (max-width: 299.98px) 
+    {
+      .card-body{
+        padding: 0.25rem !important;
+        .card-title{
+          font-size: 1.125rem !important;
+        }
+        p.card-text{
+          font-size: 1rem !important;
+          overflow-wrap: break-word;
+        }
+      }
+    }
+  }
+
+//<-========================================================Contact Section========================================================->
+  .my_portfolio_section.customer .container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 1rem;
+    scroll-snap-align: start;
+    .content{
+      width: 100%;
+      .my_portfolio_swiper{
+        padding: 1rem 2rem 2rem;
+        .swiper-wrapper{
+          .my-portfolio-customer-card{
+            outline: none;
+            margin: 0 auto;
+            padding: 0.75rem;
+            text-align: center;
+            border-radius: 0.25rem;
+            overflow: hidden;
+            max-width: 300px;
+            min-width: 180px;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 1s ease-in;
+            .my_portfolio_line{
+              .customer-image-box{
+                .customer-image{
+                  overflow: visible;
+                  width: 100%;
+                  height: 180px;
+                  background-color: #000000;
+                  clip-path: ellipse(50% 45% at 50% 45%);
+                  margin: 0 auto;
+                  background-position: center top;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  
+                  img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    border-radius: 50%;
+                  }
+                }
+              }
+              .my-portfolio-star{
+                width: 100%;
+                display: block;
+                .start-item{
+                  padding: 0 0.25rem;
+                  display: inline-block;
+                  
+                }
+                .start-item.checked{
+                  color: orange;
+                }
+              }
+              margin-bottom: 1rem;
+            }
+          }
+
+          .my-portfolio-customer-card.show_up{
+            opacity: 1;
+            transform: scale(1);
+          }
+
+        }
+      }
+    }
+    @media screen and (min-width: 768px){
+      max-height: 90vh;
+      min-height: 90vh;
+    }
+  }
+
+//<-========================================================Footer Section========================================================->
+  .my_portfolio_section.footer{
+    padding-top: 1rem;
+    text-align: center;
+    .disable-nav-item{
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .my_portfolio_footer_front_end{
+      text-align: center;
+      .my_portfolio_line{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .my_portfolio_line .navbar-brand h4{
+        text-align: center;
+        padding: 0.5rem;
+        text-decoration: none;
+        width: fit-content !important;
+      }
+
+      .nav.flex-column .nav-item{
+        display: flex;
+        justify-content: center;
+      }
+      .my-portfolio-social-media-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .left-box{
+          .my-portfolio-scroll-down-box{
+            margin-top: 0rem;
+          }
+        }
+        .social-media{
+          display: flex;
+          flex-direction: row;
+          .icon:hover{
+            opacity: 0.8;
+            transform: translateY(-15px);
+          }
+        }
+        position: relative;
+      }
+    }
+
+    .navbar-brand:hover h4,
+    .navbar-brand:focus h4{
+      z-index: 9999;
+      outline: 3px solid #0077b5 !important;
+      outline-offset: 2px;
+    }
+    .nav-item{
+      padding: 0.25rem 0.75rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .nav-item a.nav-link{
+      padding: 0.5rem;
+      font-size: 1rem;
+      width: fit-content;
+    }
+    .nav-item.active .nav-link{
+      border-bottom: 3px solid;
+    }
+
+    @media screen and (min-width: 576px){
+      .my_portfolio_footer_front_end{
+        text-align: start;
+        .my_portfolio_line{
+          width: 90%;
+          text-align: start;
+        }
+
+        .my_portfolio_line .navbar-brand h4{
+          text-align: start;
+          width: 100%;
+        }
+  
+        .nav.flex-column .nav-item{
+          justify-content: flex-start;
+        }
+
+        .my-portfolio-social-media-box{
+          justify-content: flex-start;
+        }
+      }
+    
+    }
+
+  }
+
+//<-========================================================Modal Section========================================================->
+  .my-portfolio-modal-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    z-index: 999;
+    justify-content: center;
+    align-items: center; 
+    padding: 1rem;  
+    .my-portfolio-modal-card{
+      min-width: 240px;
+      min-height: 200px;
+      display: block;
+      border-radius: 0.25rem;
+      position: relative;
+      .modal-card-title{
+        width: 100%;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+      }
+
+      .modal-body{
+        padding: 0.5rem;
+        .modal-body-wrapper{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          margin-bottom: 0.5rem;
+          .image-box{
+            max-width: 40px;
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .infomation-box{
+            padding: 0rem 1rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            
+            .modal_title{
+              width: 100%;
+              font-size: 1.125rem;
+              font-weight: 400;
+              margin-bottom: 0.75rem;
+            }
+            .modal_description{
+              font-size: 0.75rem;
+              font-style: oblique;
+            }
+          }
+        
+        }
+      }
+
+      .my-portfolio-close-button{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        transform: translate(20%, -20%);
+        border-radius: 50%;
+        border: solid thin;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+
+    @media screen and (min-width: 340px) { 
+      .my-portfolio-modal-card{
+        min-width: 300px;
+        .modal-card-title{
+          padding: 0.5rem 0 1rem 0;
+          font-size: 1.25rem;
+        }
+        .modal-body{
+          padding: 1rem;
+          .modal-body-wrapper{
+            .infomation-box{
+              .modal_title{
+                font-size: 1.125rem !important;
+              }
+              .modal_description{
+                font-size: 1.225rem;
+                font-style: oblique;
+              }
+            } 
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 568px) { 
+      .my-portfolio-modal-card{
+        min-width: 400px;
+        .modal-card-title{
+          padding: 0.5rem 0 1rem 0;
+          font-size: 1.5rem;
+        }
+        .modal-body{
+          padding: 1rem;
+          .modal-body-wrapper{
+            .infomation-box{
+              .modal_title{
+                font-size: 1.35rem !important;
+              }
+              .modal_description{
+                font-size: 1.25rem;
+                font-style: oblique;
+              }
+            } 
+          }
+        }
+      }
+    }
+
+  }
+
+  .my-portfolio-modal-container.active{
+    display: flex;
+    
+    .my-portfolio-modal-card{
+      animation: showUp 0.5s ease-in-out;
+    }
+  }
+
+//<-========================================================MyBlock Page========================================================->
+
+//<-=================Header Section===================->
+  .my_portfolio_section.my-block-header{
+    background-color: #000000;
+    min-width: 100%;
+    margin-top: 2rem;
+    .my-block-header-box{
+      min-width:100%;
+      height: 500px;
+      position: relative;
+      .information{
+        position: absolute;
+        bottom:10%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+      
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .my-block-header-no-image-box{
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+//<-=================Blog body Section===================->
+  .my-block-body, .post_detail_page{
+    .side_bar{
+      position: -webkit-sticky;
+      position: sticky;
+      top: 5rem;
+      .side_bar_item{
+        padding: 0 !important;
+        max-width: 100%;
+        .side_bar_title{
+          border-bottom: solid thin;
+          margin-bottom: 2rem !important;
+          padding: 0.5rem 0.5rem 0.5rem 1rem;
+        }
+
+        .side_bar_item_card{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          margin-bottom: 1.5rem;
+          max-width: 100%;
+          padding: 0 0.5rem 0 1rem;
+          .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .thumbnail{
+              max-width: 100px;
+              min-width: 100px;
+              cursor: pointer;
+              img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+              }
+            }
+
+            .views{
+              font-size: 12px;
+            }
+          }
+          .information{
+            padding: 1rem 0 0 0;
+            width: 100%;
+            overflow: hidden;
+            .title{
+              font-size: 18px !important;
+              overflow-wrap: break-word;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .side_bar_item_card:not(:last-of-type){
+          border-bottom: dashed thin;
+        }
+      }
+    }
+    
+    .content{
+      .my-block-body-no-image-box{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .page-item-box{
+        display: flex;
+        flex-direction: column; 
+        justify-content: flex-start;
+        margin-bottom: 3rem;
+        padding-bottom: 1rem;
+        .thumbnail{
+          max-width: 300px;
+          min-width: 200px;
+          cursor: pointer;
+          img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+
+        .information{
+          padding: 1rem 1rem 0rem 0.5rem;
+          .title{
+            cursor: pointer;
+          }
+        }
+
+      }
+
+      .page-item-box:not(:last-of-type){
+        border-bottom: dashed thin;
+      }
+  
+      @media screen and (min-width: 768px){
+        .page-item-box{
+          flex-direction: row; 
+          padding-bottom: 2rem;
+        
+          .thumbnail{
+            max-width: 300px;
+            min-width: 300px;
+          }
+
+          .information{
+            padding: 0.5rem 1rem 0 2rem;
+          }
+    
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px){
+      .side_bar{
+        .side_bar_item{  
+          .side_bar_item_card{
+            .header{
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: flex-start;
+            }
+           
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 992px){
+      .side_bar{
+        .side_bar_item{
+          .side_bar_item_card{
+            .header{
+              display: flex;
+              flex-direction: row;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  //<-=================Blog Detail Page===================->
+    .post_detail_page{  
+      .container{
+        margin-top: 6rem; 
+        .my_portfolio_section.content{ 
+          padding: 1rem;
+          .post_top_bar{
+            display: flex;
+            justify-content: space-between;
+          }
+
+          .thumbnail{
+            width: 100%;
+            img{
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+          .title{
+            display: block;
+            padding: 1rem 0;
+          }
+
+          .information{
+            margin-top: 1rem;
+            h1{
+              padding: 1rem;
+              margin-bottom: 2rem;
+              text-align: center;
+            }
+            figure.image{
+              width: 100%;
+              padding: 1rem;
+              img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .comment-box{
+      margin-bottom: 3rem;
+      .title{
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+      }
+      .content{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 1rem;
+        .avatar{
+          width: 40px;
+          height: 40px;
+          padding: 5px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-right: 1rem;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+          }
+        }
+    
+        form{
+          width: 100%;
+        }
+      }
+    
+    }
+
+    .display-comment-box{
+      .comment-card,.reply-card{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 1.5rem;
+        padding: 1rem 1rem 1rem 0.5rem;
+        .avatar{
+          width: 40px;
+          height: 40px;
+          padding: 5px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-right: 1rem;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+          }
+        }
+        .comment{
+          width: 100%;
+          .header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .title{
+              margin-bottom: 0.25rem !important;
+              margin-right: 1rem;
+            }
+          }
+        
+          
+        }
+      }
+
+      .reply-card-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .view-reply-button{
+          margin-right: 3rem;
+          cursor: pointer;
+
+        }
+
+        .view-reply-button:hover{
+          text-decoration: underline;
+        }
+      }
+
+      .reply-card-box{
+          border: thin solid;
+          border-radius: 0.5rem;
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      }
+
+      .reply-card-box.active{
+        opacity: 1;
+        max-height:fit-content
+    }
+
+    }
+    
+    .reply-box{
+      .action{
+        display: flex;
+        flex-direction: row;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        .action_button{
+          cursor: pointer;
+          margin-right: 1rem;
+          padding: 0 5px;
+          width: fit-content;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $my_portfolio_button_color;
+          color: $my_portfolio_button_text_color;
+          outline: none;
+        }
+
+        .action_button:hover{
+          background-color: $my_portfolio_button_color_hover;
+          color: $my_portfolio_button_text_color_hover;
+        }
+
+        .action_button.delete{
+          color: red !important;
+        }
+        .action_button.like{
+          background-color: transparent !important;
+          color: $my_portfolio_button_color;
+          display: flex;
+          flex-direction: row;
+          .button_like, .button_dislike{
+            margin-left: 2rem;
+          }
+          .button_like, .button_dislike{
+            margin-left: 1rem;
+          }
+
+          .button_like.active, .button_dislike.active{
+            color: blue;
+          }
+
+          .button_like:hover, .button_dislike:hover{
+            color: $my_portfolio_button_text_color_hover;
+          }
+        }
+      }
+
+      form.reply-form{
+        display: none;
+        .submit_button_box{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+        }
+      }
+
+      form.reply-form.show{
+        display: block;
+        .reply:focus{
+          border: thin solid red;
+        }
+      }
+    }
+
+//<-================Site map Page===================->
+  .site-map-page{
+    .container{
+      margin-top: 6rem; 
+      .my_portfolio_section.site-map{
+        .contact-informarion-item{
+          display: flex;
+          flex-direction: row;
+          max-width: 500px;
+          margin-bottom: 3rem;
+          overflow: hidden;
+          position: relative;
+          .image-box-background{
+            min-width: 25%;
+            max-width: 25%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+              font-size: 2rem;
+            }
+          }
+          .card-body{
+            padding: 0.5rem 1rem 0;
+            .card-title{
+              margin-bottom: 1rem;
+            }
+            .card-text{
+              margin-bottom: 0.75rem !important;
+            }
+          }
+        }
+        iframe{
+          border: 0;
+          width: 100%;
+          min-height: 600px;
+        }
+      }
+    }
+  }
+
+//<-=================Page loading===================->
+  .my-portfolio-page-loading{
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    .loader {
+      border: 12px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 12px solid blue;
+      border-right: 12px solid green;
+      border-bottom: 12px solid red;
+      width: 60px;
+      height: 60px;
+      -webkit-animation: spin 1s linear infinite;
+      animation: spin 1s linear infinite;
+    }
+    
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  }
+
+  

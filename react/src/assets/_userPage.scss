@@ -1,0 +1,27 @@
+.my_portfolio_section_wrapper{
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.my_portfolio_login .card, .my_portfolio_register .card{
+    min-width: 80%;
+}
+
+.my_portfolio_auth_section .card{
+    min-width: 80%;
+}
+
+@media screen and (min-width: 568px){
+    .my_portfolio_login .card, .my_portfolio_register .card{
+        min-width: 500px;
+        max-width: 500px;
+    }
+    
+    .my_portfolio_auth_section .card{
+        min-width: 500px;
+        max-width: 500px;
+    }
+}

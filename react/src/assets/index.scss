@@ -1,0 +1,226 @@
+    @import '_config.scss';
+    @import '_userPage.scss';
+    @import 'admin.scss';
+    @import 'frontend.scss';
+    
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    a{
+        text-decoration: none !important;
+    }
+
+    a,
+    p{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    html{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scroll-padding-top: 60px;
+        scroll-behavior: smooth;
+        scroll-snap-type: y proximity;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    body{
+        min-width: 100%;
+        min-height: 100%;
+        .my_portfolio_body{
+            display: flex;
+            flex-direction: column;
+            min-width: 100%;
+            min-height: 100%;
+            .my_portfolio_main{
+                min-width: 100%;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                .my_portfolio_section{
+                    margin-bottom: 6rem;
+                }
+            }
+        
+            .my-portfolio-footer{
+                z-index: 999;
+                margin-top: auto;
+            }
+        }    
+    }
+
+    .my-portfolio-table-button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .button{
+            width: 2rem;
+            height: 2rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-right: 0.5rem;
+        }
+
+        .update{
+            border: solid 1px rgb(139, 122, 46);
+        }
+
+        .delete{
+            border: solid 1px rgb(231, 69, 5);
+        }
+    }
+
+    .portfolio_image_button{
+        border: thin dashed blue;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        z-index: 60;
+
+        input{
+            border-radius: 5px;
+            opacity: 0;
+            z-index: 40;
+            position: absolute;
+            left: 5%;
+            top: 5%;
+            width: 90%;
+            height: 90%;
+        }
+
+        img{
+            position: absolute;
+            left: 5%;
+            top: 5%;
+            width: 90%;
+            height: 90%;
+            border-radius: 5px;
+            z-index: 10;
+        }
+    }
+
+    .my-portfolio-avatar{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            margin-right: 5px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit:cover;
+        }
+    }
+
+    .my_portfolio_feeback{
+        .danger {
+            background-color: rgba($color: #ffdddd, $alpha: 0.6);;
+            border-left: 6px solid #f44336;
+            margin-bottom: 15px;
+            padding: 4px 12px;
+        }
+        
+        .success {
+            background-color: rgba($color: #ddffdd, $alpha: 0.6);
+            border-left: 6px solid #04AA6D;
+            margin-bottom: 15px;
+            padding: 4px 12px;
+        }
+        
+        .info {
+            background-color: rgba($color: #e7f3fe, $alpha: 0.6);
+            border-left: 6px solid #2196F3;
+            margin-bottom: 15px;
+            padding: 4px 12px;
+        }
+        
+        
+        .warning {
+            background-color:rgba($color: #ffffcc, $alpha: 0.6);
+            border-left: 6px solid #ffeb3b;
+            margin-bottom: 15px;
+            padding: 4px 12px;
+        }
+    }
+    .ck.ck-content{
+        min-height: 400px;
+    }
+
+    .my-portfolio-button{
+        padding: 0.5rem 0.75rem;
+        font-size: 1.1rem;
+        font-weight: 400;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 0.15rem;
+        transition: all 0.3s;
+        margin-top: 1rem;
+        span{
+            margin-left: 0.15rem;
+        }
+    }
+
+    .my-portfolio-button:hover{
+        span{
+            margin-left: 0.25rem;
+        }
+    }
+
+    .my-portfolio-scroll-to-top{
+        width: fit-content;
+        height: fit-content;
+        position: fixed;
+        right: 1rem;
+        bottom: 0;
+        display: none;
+        z-index: 9999;
+        .my-portfolio-button{
+            width: 55px;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            i{
+                font-size: 2rem;
+                font-weight: 300;
+            }
+        }
+    }
+    .my-portfolio-scroll-to-top.scroll-to-top{
+       display: block;
+    }
+    .my-portfolio-scroll-to-top:hover{
+        .my-portfolio-button{
+            i{
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+
+
+
+
+
+

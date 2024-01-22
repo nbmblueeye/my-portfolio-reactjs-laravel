@@ -1,0 +1,1190 @@
+
+//Auto Theme Color
+    $my_portfolio_body_background_color: #fff;
+    $my_portfolio_main_background_color: #fff;
+    
+//Light Theme Color
+    $my_portfolio_body_background_light_color: #f2f2f2;
+    $my_portfolio_main_background_light_color: #f3f3f3;
+//Dark Theme Color
+    $my_portfolio_body_background_dark_color: #111;
+    $my_portfolio_main_background_dark_color: #212529;
+
+//Global Color
+    $my_portfolio_section_title_color: rgba(3, 102, 214, 0.8);
+    $my_portfolio_section_sub_title_color: rgba(3, 102, 214, 0.7);
+    $my_portfolio_card_title_color: rgba(3, 102, 214, 0.6);
+
+    $my_portfolio_button_color: rgba(3, 102, 214, 0.6);
+    $my_portfolio_button_color_hover: rgba(3, 102, 214, 1);
+    $my_portfolio_button_text_color: rgba(5, 229, 249, 0.6);
+    $my_portfolio_button_text_color_hover: rgba(5, 229, 249, 1);
+
+    $my_portfolio_blur_color: rgba(3, 102, 214, 0.6);
+    $my_portfolio_blur_hover_color: rgba(3, 102, 214, 0.8);
+
+    @function set_text_color($color){
+        @if(lightness($color) > 70){
+            @return #111;
+        }@else{
+            @return #f3f3f3;
+        }
+    }
+
+    @mixin set_section_background_color($color){
+        background-color: $color;
+        color: set_text_color($color) !important;
+    }
+
+    .my_portfolio_body.auto{
+        background-color:  $my_portfolio_body_background_color;
+        //Main 
+        .my_portfolio_main{
+           background-color: $my_portfolio_main_background_color;
+        }
+        //Section
+        .my_portfolio_section{
+            @include set_section_background_color(darken($my_portfolio_body_background_color,5%));
+            border-color: darken($my_portfolio_body_background_color,15%);
+            .card-header{
+                border-bottom-color: darken($my_portfolio_body_background_color,15%);
+            }
+            .my_portfolio_header{
+                border-bottom: thin solid darken($my_portfolio_body_background_color,15%);
+                margin-bottom: 1.5rem;
+            }
+            .table > :not(caption) > * > * {
+                border-color: darken($my_portfolio_body_background_color,15%);
+                @include set_section_background_color(darken($my_portfolio_body_background_color,5%))
+            }
+        }
+
+    
+        input,textarea, .form-select, .nav-tabs .nav-link.active{
+            background-color: $my_portfolio_body_background_color;
+            color:darken($my_portfolio_body_background_color,70%);
+            border: solid thin darken($my_portfolio_main_background_color,30%);
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: darken($my_portfolio_body_background_color,30%);
+            opacity: 1; /* Firefox */
+        }
+          
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: darken($my_portfolio_body_background_color,30%);
+        }
+          
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: darken($my_portfolio_body_background_color,30%);
+        }
+
+       // -------------------------------Admin-------------------------------------------------------------------
+        //Header 
+            #my_portfolio_header{
+                background-color: darken($my_portfolio_body_background_color,5%);
+                
+                .sidebar-toggler{
+                    color: set_text_color(darken($my_portfolio_body_background_color,5%)) ;
+                }
+
+                .sidebar-toggler:hover{
+                    @include set_section_background_color(darken($my_portfolio_body_background_color,10%));
+                }
+
+                .navbar-brand , .nav-item , li a{
+                    color: set_text_color(darken($my_portfolio_body_background_color,5%)) ;
+                }
+
+                .nav-item:hover{
+                    @include set_section_background_color(darken($my_portfolio_body_background_color,10%));
+                }
+
+                .my_portfolio_section .dropdown-menu{
+                    @include set_section_background_color(darken($my_portfolio_body_background_color,5%));
+                }
+
+                .my_portfolio_section .dropdown-menu .dropdown-item:hover{
+                    @include set_section_background_color(darken($my_portfolio_body_background_color,10%));
+                }
+            }
+
+        //Header 
+            .my_portfolio_admin_navbar{
+                .navbar_box{
+                    .navbar-column.left{ border-right-color: darken($my_portfolio_body_background_color,15%); }
+                }
+                .navbar-column.right{
+                    .my-portfolio-nav-box{
+                        .my_portfolio_dropdown{
+                            .my_portfolio_dropdown_menu{
+                                @include set_section_background_color(darken($my_portfolio_body_background_color,5%));
+                                li.dropdown-item:hover{
+                                    @include set_section_background_color(darken($my_portfolio_body_background_color,10%));
+                                }
+                            }
+                        }
+                    }
+
+                    .search.display-search{
+                        @include set_section_background_color(darken($my_portfolio_body_background_color,10%));
+                    }
+                }
+            }
+    
+        //SideBar
+            .admin-column.side-bar{
+                .my_portfolio_admin_sidebar{       
+                        .sidebar-item:hover{
+                            @include set_section_background_color(darken($my_portfolio_body_background_color,10%))
+                        }
+
+                        .sidebar-item-box.active{
+                            background-color: darken($my_portfolio_body_background_color,15%) !important;
+                        }
+
+                        .sidebar-item.active{
+                            @include set_section_background_color(darken($my_portfolio_body_background_color,10%));
+                        }
+
+                        .sub-sidebar-item{
+                            .item:hover{
+                                @include set_section_background_color(darken($my_portfolio_body_background_color,10%))
+                            }
+                        }
+
+                        .sub-sidebar-item{
+                            .item.active{
+                                @include set_section_background_color(darken($my_portfolio_body_background_color,10%))
+                            }
+                        }
+                
+                        .my_portfolio_admin_divider{
+                            color: darken($my_portfolio_body_background_color,30%);
+                            .line{
+                                background-color: darken($my_portfolio_body_background_color,15%);
+                            }
+                        }
+
+                }
+            }
+
+        // -------------------------------Front End-------------------------------------------------------------------
+
+        #my_portfolio_header_front_end{      
+            background-color: $my_portfolio_body_background_dark_color;
+
+            .navbar-brand {
+                color: $my_portfolio_body_background_color;
+            }
+
+            .nav-item{
+                .nav-link{
+                    color: $my_portfolio_body_background_color;
+                }
+                border-bottom-color: lighten($my_portfolio_body_background_dark_color, 10%) !important;
+            }
+
+            .nav-item:hover, .navbar-brand:hover{
+                background-color: lighten($my_portfolio_body_background_dark_color, 10%);
+            }
+
+            .nav-item.active, .navbar-brand.active{
+                background-color: lighten($my_portfolio_body_background_dark_color, 10%);
+            }
+
+            .nav-item.disable-nav-item{
+                .nav-link{
+                    color: darken($color: $my_portfolio_body_background_color, $amount: 60%) !important;
+                }
+            }
+
+            @media screen and (min-width: 992px){
+                .nav-item.active .nav-link{
+                    border-bottom-color: $my_portfolio_body_background_color;
+                }
+            }
+
+            .my-portfolio-nav-right {
+                .my_portfolio_dropdown{
+                  .my_portfolio_dropdown_menu{
+                    background-color: $my_portfolio_body_background_dark_color;
+                    li.dropdown-item{
+                      a{
+                        color: $my_portfolio_body_background_color;
+                      }
+                    }
+                    li.dropdown-item:hover{
+                        background-color: lighten($my_portfolio_body_background_dark_color, 10%);
+                    }
+                    .my_portfolio_dropdown_divider{
+                        background-color: lighten($my_portfolio_body_background_dark_color, 10%);
+                    }
+                  }
+                }
+
+            }
+        
+            .my-portfolio-nav-cover{
+                background-color: rgba($color:darken($my_portfolio_body_background_color,60%), $alpha: 0.3) !important;
+            }
+
+            .my-portfolio-nav-content{
+                background-color: darken($my_portfolio_body_background_color,70%);
+                .my-portfolio-nav-header{
+                    background-color: darken($my_portfolio_body_background_color,80%) !important;
+                    .navbar-brand{
+                        color: darken($my_portfolio_body_background_color, 30%);
+                    }
+
+                    .navbar-close-button{
+                        color: darken($my_portfolio_body_background_color, 30%);
+                        background-color: darken($my_portfolio_body_background_color,75%) !important;
+                    }
+
+                    .navbar-close-button:hover{
+                        background-color: darken($my_portfolio_body_background_color,70%) !important;
+                    }
+                }
+
+                .user-accordion-item{
+                    border-bottom-color: lighten($my_portfolio_body_background_dark_color, 10%) !important;
+                    i{
+                        color: darken($my_portfolio_body_background_color, 40%) !important;
+                    }
+                    span{
+                        color: darken($my_portfolio_body_background_color, 30%) !important;
+                    }
+                }
+
+                .user-accordion-item:hover{
+                   background-color: lighten($my_portfolio_body_background_dark_color, 15%);
+                }
+                
+            } 
+
+            .my-portfolio-toggler-button{
+                border-color: $my_portfolio_body_background_color !important;
+            }
+        }
+
+        .my_portfolio_footer_front_end{      
+            background-color: darken($my_portfolio_body_background_color,5%);         
+        
+            .navbar-brand , a , p{
+                color: set_text_color(darken($my_portfolio_body_background_color,5%)) ;
+            }
+
+            .nav-item:hover{
+                @include set_section_background_color(darken($my_portfolio_body_background_color,10%))
+            }
+
+            .navbar-brand:hover h4{
+                @include set_section_background_color(darken($my_portfolio_body_background_color,15%))
+            }
+
+            .navbar-brand.active h4{
+                @include set_section_background_color(darken($my_portfolio_body_background_color,15%))
+            }
+
+            .nav-item.disable-nav-item{
+                .nav-link{
+                    color: darken($color: $my_portfolio_body_background_color, $amount: 40%) !important;
+                }
+            }
+
+            .my_portfolio_section .dropdown-menu{
+                @include set_section_background_color(darken($my_portfolio_body_background_color,5%))
+            }
+
+            .my_portfolio_section .dropdown-menu .dropdown-item:hover{
+                @include set_section_background_color(darken($my_portfolio_body_background_color,10%))
+            }
+
+         }
+
+        //Slider
+        .my-portfolio-swiper-slide{
+            background-color: darken($my_portfolio_body_background_color, 10%);
+            .my-portfolio-slider-box{
+                .information{
+                    background-color: rgba($color: darken($my_portfolio_body_background_color, 15%), $alpha: 0.8);
+                    color: set_text_color(darken($my_portfolio_body_background_color,10%)) !important;
+                }
+            }
+        }
+
+
+       //Modal
+        .my-portfolio-modal-container{
+            background-color: rgba(0, 0, 0, 0.3);
+            .my-portfolio-modal-card{
+                @include set_section_background_color(darken($my_portfolio_body_background_color,5%));
+                border-color: darken($my_portfolio_body_background_color,15%);
+            }
+
+            .my-portfolio-close-button{
+                @include set_section_background_color(darken($my_portfolio_body_background_color,5%));
+                border-color: darken($my_portfolio_body_background_color,25%);
+            }
+
+            .my-portfolio-close-button:hover{
+                @include set_section_background_color(darken($my_portfolio_body_background_color,20%));
+                border-color: darken($my_portfolio_body_background_color,50%);
+            }
+        }
+
+        //Box Shadow
+        .box-shadow{
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        }
+        .customer-image-box{
+            filter: drop-shadow(-1px 3px 3px rgba(0, 0, 0, 0.5));
+        }   
+          //Line
+        .my_portfolio_line{
+            border-bottom: thin solid darken($my_portfolio_body_background_color,15%);
+        }
+
+        //Box
+         .my_portfolio_box, .my-portfolio-card{
+            background-color: darken($my_portfolio_body_background_color,10%);
+        }
+
+        //Box
+        .my-portfolio-card{
+            background-color: $my_portfolio_body_background_color;
+        }
+
+        //Boder
+        .my_portfolio_border{
+            border: thin solid darken($my_portfolio_body_background_color,15%);
+        }
+
+        //Avatar Background Image
+        .my-portfolio-image-background{
+            fill: $my_portfolio_body_background_color;
+        }
+
+        .image-box-background{
+            background-color: darken($my_portfolio_body_background_color,15%);
+        }
+
+        .my-portfolio-ovelay{
+            background-color: $my_portfolio_blur_color;
+            .eye{
+                color:$my_portfolio_button_text_color;
+                .my-portfolio-tooltip{
+                    @include set_section_background_color(darken($my_portfolio_body_background_color,5%));
+                    border-color: darken($my_portfolio_body_background_color,15%);
+                }
+                .my-portfolio-tooltip::after {
+                    border-color: darken($my_portfolio_body_background_color,5%) transparent transparent transparent;
+                }
+            }
+        }
+
+        .my-portfolio-border-bottom-color{
+            border-bottom-color: darken($my_portfolio_body_background_color,25%) !important;
+        }
+
+    }
+
+    .my_portfolio_body.light{
+
+        background-color:  $my_portfolio_body_background_light_color;
+        //Main 
+        .my_portfolio_main{
+           background-color: $my_portfolio_main_background_light_color;
+        }
+        //Section
+        .my_portfolio_section{
+            @include set_section_background_color(darken($my_portfolio_body_background_light_color,10%));
+            border-color: darken($my_portfolio_body_background_light_color,15%);
+            .card-header{
+                border-bottom-color: darken($my_portfolio_body_background_light_color,15%);
+            }
+            .my_portfolio_header{
+                border-bottom: thin solid  darken($my_portfolio_body_background_light_color,15%);
+                margin-bottom: 1.5rem;
+            }
+            .table > :not(caption) > * > * {
+                border-color: darken($my_portfolio_body_background_light_color,15%);
+                @include set_section_background_color(darken($my_portfolio_body_background_light_color,10%))
+            }
+        }
+
+        input,textarea, .form-select, .nav-tabs .nav-link.active {
+            background-color: $my_portfolio_body_background_light_color;
+            color:darken($my_portfolio_body_background_light_color,70%);
+            border: solid thin darken($my_portfolio_body_background_light_color,30%);
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: darken($my_portfolio_body_background_light_color,30%);
+            opacity: 1; /* Firefox */
+        }
+          
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: darken($my_portfolio_body_background_light_color,30%);
+        }
+          
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: darken($my_portfolio_body_background_light_color,30%);
+        }
+
+         // -------------------------------Admin-------------------------------------------------------------------
+            //Header 
+            #my_portfolio_header{
+                background-color: darken($my_portfolio_body_background_light_color,10%);
+
+                .sidebar-toggler{
+                    color: set_text_color(darken($my_portfolio_body_background_light_color,10%)) ;
+                }
+
+                .sidebar-toggler:hover{
+                    @include set_section_background_color(darken($my_portfolio_body_background_light_color,15%))
+                }
+                
+                
+                .navbar-brand , .nav-item, li a{
+                    color: set_text_color(darken($my_portfolio_body_background_light_color,10%)) ;
+                }
+
+                .nav-item:hover{
+                    @include set_section_background_color(darken($my_portfolio_body_background_light_color,15%))
+                }
+
+                .my_portfolio_section .dropdown-menu{
+                    @include set_section_background_color(darken($my_portfolio_body_background_light_color,10%))
+                }
+
+                .my_portfolio_section .dropdown-menu .dropdown-item:hover{
+                    @include set_section_background_color(darken($my_portfolio_body_background_light_color,20%))
+                }
+            }
+
+          //Header 
+            .my_portfolio_admin_navbar{
+                .navbar_box{
+                    .navbar-column.left{ border-right-color: darken($my_portfolio_body_background_light_color,15%); }
+                }
+                .navbar-column.right{
+                    .my-portfolio-nav-box{
+                        .my_portfolio_dropdown{
+                            .my_portfolio_dropdown_menu{
+                                @include set_section_background_color(darken($my_portfolio_body_background_light_color,10%));
+                                li.dropdown-item:hover{
+                                    @include set_section_background_color(darken($my_portfolio_body_background_light_color,20%))
+                                }
+                            }
+                        }
+                    }
+                    .search.display-search{
+                        @include set_section_background_color(darken($my_portfolio_body_background_light_color,15%));
+                    }
+                }
+            }
+
+         //SideBar
+            .admin-column.side-bar{
+                .my_portfolio_admin_sidebar{       
+                
+                    .sidebar-item:hover{
+                        @include set_section_background_color(darken($my_portfolio_body_background_light_color,15%))
+                    }
+
+                    .sidebar-item-box.active{
+                        background-color: darken($my_portfolio_body_background_light_color,20%);
+                    }
+
+                    .sidebar-item.active{
+                        @include set_section_background_color(darken($my_portfolio_body_background_light_color,15%))
+                    }
+
+
+                    .sub-sidebar-item{
+                        .item:hover{
+                            @include set_section_background_color(darken($my_portfolio_body_background_light_color,15%))
+                        }
+                    }
+
+                    .sub-sidebar-item{
+                        .item.active{
+                            @include set_section_background_color(darken($my_portfolio_body_background_light_color,15%))
+                        }
+                    }
+            
+                    .my_portfolio_admin_divider{
+                        color: darken($my_portfolio_body_background_light_color,30%);
+                        .line{
+                            background-color: darken($my_portfolio_body_background_light_color,15%);
+                        }
+                    }
+                
+                }
+            }  
+         // -------------------------------Front End-------------------------------------------------------------------
+
+         #my_portfolio_header_front_end{      
+            background-color: lighten($color: $my_portfolio_body_background_dark_color, $amount: 20%);
+
+            .navbar-brand {
+                color: $my_portfolio_body_background_light_color;
+            }
+
+            .nav-item{
+                .nav-link{
+                    color: $my_portfolio_body_background_light_color;
+                }
+                border-bottom-color: lighten($my_portfolio_body_background_dark_color, 30%) !important;
+            }
+
+            .nav-item:hover, .navbar-brand:hover{
+                background-color: lighten($my_portfolio_body_background_dark_color, 30%);
+            }
+
+            .nav-item.active, .navbar-brand:active{
+                background-color: lighten($my_portfolio_body_background_dark_color, 30%);
+            }
+
+            .nav-item.disable-nav-item{
+                .nav-link{
+                    color: darken($color: $my_portfolio_body_background_light_color, $amount: 40%) !important;
+                }
+            }
+
+            @media screen and (min-width: 992px){
+                .nav-item.active .nav-link{
+                    border-bottom-color: $my_portfolio_body_background_light_color;
+                }
+            }
+
+
+            .my-portfolio-nav-right {
+                .my_portfolio_dropdown{
+                  .my_portfolio_dropdown_menu{
+                    background-color: lighten($color: $my_portfolio_body_background_dark_color, $amount: 20%);
+                    li.dropdown-item{
+                      a{
+                        color: $my_portfolio_body_background_light_color;
+                      }
+                    }
+                    li.dropdown-item:hover{
+                        background-color: lighten($my_portfolio_body_background_dark_color, 30%);
+                    }
+                    .my_portfolio_dropdown_divider{
+                        background-color: lighten($my_portfolio_body_background_dark_color, 30%);
+                    }
+                  }
+                }
+
+            }
+        
+            .my-portfolio-nav-cover{
+                background-color: rgba($color:darken($my_portfolio_body_background_light_color,60%), $alpha: 0.3) !important;
+            }
+            .my-portfolio-nav-content{
+
+                background-color: darken($my_portfolio_body_background_light_color,70%);
+
+                .my-portfolio-nav-header{
+                    background-color: darken($my_portfolio_body_background_light_color,80%) !important;
+                    .navbar-brand{
+                        color: darken($my_portfolio_body_background_light_color, 30%);
+                    }
+
+                    .navbar-close-button{
+                        color: darken($my_portfolio_body_background_light_color, 30%);
+                        background-color: darken($my_portfolio_body_background_light_color,75%) !important;
+                    }
+
+                    .navbar-close-button:hover{
+                        background-color: darken($my_portfolio_body_background_light_color,70%) !important;
+                    }
+                }
+
+                .user-accordion-item{
+                    border-bottom-color: lighten($my_portfolio_body_background_dark_color, 30%) !important;
+                    i{
+                        color: darken($my_portfolio_body_background_light_color, 40%) !important;
+                    }
+                    span{
+                        color: darken($my_portfolio_body_background_light_color, 30%) !important;
+                    }
+                }
+
+                .user-accordion-item:hover{
+                    background-color: lighten($my_portfolio_body_background_dark_color, 35%);
+                }
+                
+            }     
+            
+            .my-portfolio-toggler-button{
+                border-color: $my_portfolio_body_background_light_color !important;
+            }
+
+        }
+
+         .my_portfolio_footer_front_end{
+            background-color: darken($my_portfolio_body_background_light_color,10%);
+            .navbar-toggler{
+                @include set_section_background_color(darken($my_portfolio_body_background_light_color, 30%))
+            }
+            .navbar-toggler:hover, .navbar-toggler:focus{
+                @include set_section_background_color(darken($my_portfolio_body_background_light_color, 40%))
+            }
+            .navbar-brand , a, p{
+                color: set_text_color(darken($my_portfolio_body_background_light_color,10%)) ;
+            }
+            .nav-item:hover{
+                @include set_section_background_color(darken($my_portfolio_body_background_light_color,15%))
+            }
+
+            .navbar-brand:hover h4{
+                @include set_section_background_color(darken($my_portfolio_body_background_light_color,15%))
+            }
+
+            .navbar-brand.active h4{
+                @include set_section_background_color(darken($my_portfolio_body_background_light_color,15%))
+            }
+
+            .nav-item.disable-nav-item{
+                .nav-link{
+                    color: darken($color:$my_portfolio_body_background_light_color, $amount: 40%) !important;
+                }
+            }
+
+            .my_portfolio_section .dropdown-menu{
+                @include set_section_background_color(darken($my_portfolio_body_background_light_color,10%))
+            }
+
+            .my_portfolio_section .dropdown-menu .dropdown-item:hover{
+                @include set_section_background_color(darken($my_portfolio_body_background_light_color,20%))
+            }
+         }
+
+        //Slider
+        .my-portfolio-swiper-slide{
+            background-color:darken($my_portfolio_body_background_light_color,10%);
+            .my-portfolio-slider-box{
+                .information{
+                    background-color: rgba($color: darken($my_portfolio_body_background_light_color,15%), $alpha: 0.8);
+                    color: set_text_color(darken($my_portfolio_body_background_color,15%)) !important;
+                }
+            }
+        } 
+
+        
+         //Modal
+         .my-portfolio-modal-container{
+            background-color: rgba(0, 0, 0, 0.5);
+            .my-portfolio-modal-card{
+                @include set_section_background_color(darken($my_portfolio_body_background_color,5%));
+                border-color: darken($my_portfolio_body_background_color,15%);
+            }
+
+            .my-portfolio-close-button{
+                @include set_section_background_color(darken($my_portfolio_body_background_color,5%));
+                border-color: darken($my_portfolio_body_background_color,25%);
+            }
+
+            .my-portfolio-close-button:hover{
+                @include set_section_background_color(darken($my_portfolio_body_background_color,25%));
+                border-color: darken($my_portfolio_body_background_color,50%);
+            }
+        }
+
+        //Box Shadow
+        .box-shadow{
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px, rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.1) 0px 4px 8px, rgba(0, 0, 0, 0.1) 0px 8px 16px, rgba(0, 0, 0, 0.1) 0px 16px 32px, rgba(0, 0, 0, 0.1) 0px 32px 64px;
+        }
+
+        
+        //Box
+        .my_portfolio_box, .my-portfolio-card{
+            background-color: darken($my_portfolio_body_background_light_color,18%);
+        }
+
+        .my-portfolio-card{
+            background-color: $my_portfolio_body_background_light_color;
+        }
+
+         //Border
+        .my_portfolio_border{
+            border-color: darken($my_portfolio_body_background_light_color,25%);
+        }
+
+        .customer-image-box{
+            filter: drop-shadow(-1px 3px 3px rgba(0, 0, 0, 0.8));
+        } 
+
+        //Line
+        .my_portfolio_line{
+            border-bottom: thin solid  darken($my_portfolio_body_background_light_color,15%);
+        }
+
+
+         //Avatar Background Image
+         .my-portfolio-image-background{
+            fill: $my_portfolio_body_background_light_color;
+        }
+
+        .image-box-background{
+            background-color: darken($my_portfolio_body_background_color,15%);
+        }
+
+        .my-portfolio-ovelay{
+            background-color: $my_portfolio_blur_color;
+            .eye{
+                color:$my_portfolio_button_text_color;
+                .my-portfolio-tooltip{
+                    @include set_section_background_color(darken($my_portfolio_body_background_light_color,10%));
+                    border-color: darken($my_portfolio_body_background_light_color,15%);
+                }
+                .my-portfolio-tooltip::after {
+                    border-color: darken($my_portfolio_body_background_light_color,10%) transparent transparent transparent;
+                }
+            }
+        }
+
+        .my-portfolio-border-bottom-color{
+            border-bottom-color: darken($my_portfolio_body_background_light_color,25%) !important;
+        }
+
+    }
+
+    .my_portfolio_body.dark{
+        background-color: $my_portfolio_body_background_dark_color;
+        //Main 
+        .my_portfolio_main{
+            background-color: $my_portfolio_main_background_dark_color;
+        }
+        //Section
+        .my_portfolio_section{
+            @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 10%));
+            border-color: lighten($my_portfolio_body_background_dark_color,40%);
+
+            .card-header{
+                border-bottom-color: lighten($my_portfolio_body_background_dark_color,40%);
+            }
+            .my_portfolio_header{
+                border-bottom: thin solid lighten($my_portfolio_body_background_dark_color,40%);
+                margin-bottom: 1.5rem;
+            }
+            .table > :not(caption) > * > * {
+                border-color: lighten($my_portfolio_body_background_dark_color,40%);
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 10%))
+            }
+        }
+ 
+        input, textarea, .form-select, .nav-tabs .nav-link.active{
+            background-color: $my_portfolio_body_background_dark_color;
+            color:lighten($my_portfolio_body_background_dark_color,70%);
+            border: solid thin lighten($my_portfolio_body_background_dark_color,40%);
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: lighten($my_portfolio_body_background_dark_color,40%);
+            opacity: 1; /* Firefox */
+        }
+          
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: lighten($my_portfolio_body_background_dark_color,40%);
+        }
+          
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: lighten($my_portfolio_body_background_dark_color,40%);
+        }
+
+        // -------------------------------Admin-------------------------------------------------------------------
+
+        //Header 
+            #my_portfolio_header{
+                background-color: lighten($my_portfolio_body_background_dark_color, 10%);
+
+                .sidebar-toggler{
+                    color: set_text_color(lighten($my_portfolio_body_background_dark_color, 10%)) ;
+                }
+
+                .sidebar-toggler:hover{
+                    @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 20%))
+                }
+                
+                .navbar-brand , .nav-item , li a {
+                        color: set_text_color(lighten($my_portfolio_body_background_dark_color, 10%)) ;
+                    }
+
+                .nav-item:hover{
+                    @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 20%))
+                }
+
+                .my_portfolio_section .dropdown-menu{
+                    @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 10%))
+                }
+
+                .my_portfolio_section .dropdown-menu .dropdown-item:hover{
+                    @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 20%))
+                }
+            }
+
+         //Header 
+            .my_portfolio_admin_navbar{
+                .navbar_box{
+                    .navbar-column.left{ border-right-color: lighten($my_portfolio_body_background_dark_color,20%); }
+                    .navbar-column.right{
+                        .my-portfolio-nav-box{
+                            .my_portfolio_dropdown{
+                                .my_portfolio_dropdown_menu{
+                                    @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 10%));
+                                    li.dropdown-item:hover{
+                                        @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 20%))
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .search.display-search{ 
+                        @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 15%));
+                    }
+                }
+            }
+        
+         //SideBar
+            .admin-column.side-bar{
+                .my_portfolio_admin_sidebar{       
+                
+                    .sidebar-item:hover{
+                        @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 15%))
+                    }
+
+                    .sidebar-item-box.active{
+                        background-color: lighten($my_portfolio_body_background_dark_color, 20%);
+                    }
+
+                    .sidebar-item.active{
+                        @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 15%))
+                    }
+
+                    .sub-sidebar-item{
+                        .item:hover{
+                            @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 15%))
+                        }
+                    }
+
+                    .sub-sidebar-item{
+                        .item.active{
+                            @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 15%))
+                        }
+                    }
+            
+                    .my_portfolio_admin_divider{
+                        color: lighten($my_portfolio_body_background_dark_color,40%);
+                        .line{
+                            background-color: lighten($my_portfolio_body_background_dark_color,20%);
+                        }
+                    }
+                    
+                }
+            }   
+        // -------------------------------Front End-------------------------------------------------------------------
+
+        #my_portfolio_header_front_end{      
+            background-color: darken($my_portfolio_body_background_color, 5%);
+
+            .navbar-brand {
+                color: $my_portfolio_body_background_dark_color;
+            }
+
+            .nav-item{
+                .nav-link{
+                    color: $my_portfolio_body_background_dark_color;
+                }
+                border-bottom-color: lighten($my_portfolio_body_background_dark_color, 75%);
+            }
+
+            .nav-item:hover, .navbar-brand:hover{
+                background-color: darken($my_portfolio_body_background_color, 15%);
+            }
+
+            .nav-item.active, .navbar-brand.active{
+                background-color: darken($my_portfolio_body_background_color, 15%);
+            }
+
+            .nav-item.disable-nav-item{
+                .nav-link{
+                    color: lighten($color: $my_portfolio_body_background_dark_color, $amount: 60%) !important;
+                }
+            }
+
+            @media screen and (min-width: 992px){
+                .nav-item.active .nav-link{
+                    border-bottom-color: $my_portfolio_body_background_dark_color;
+                }
+            }
+
+            .my-portfolio-nav-right {
+                .my_portfolio_dropdown{
+                  .my_portfolio_dropdown_menu{
+                    background-color: darken($my_portfolio_body_background_color, 5%);
+                    li.dropdown-item{
+                      a{
+                        color: $my_portfolio_body_background_dark_color;
+                      }
+                    }
+                    li.dropdown-item:hover{
+                        background-color: darken($my_portfolio_body_background_color, 10%);
+                    }
+                    .my_portfolio_dropdown_divider{
+                        background-color: darken($my_portfolio_body_background_color, 10%);
+                    }
+                  }
+                }
+            }
+        
+            .my-portfolio-nav-cover{
+                background-color: rgba(darken($my_portfolio_body_background_color,20%), 0.3) !important;
+            }
+            .my-portfolio-nav-content{
+                background-color: darken($my_portfolio_body_background_color, 10%);
+                .my-portfolio-nav-header{
+                    background-color: darken($my_portfolio_body_background_color, 7%);
+                    .navbar-brand{
+                       color: $my_portfolio_body_background_dark_color;
+                    }
+
+                    .navbar-close-button{
+                        color: $my_portfolio_body_background_dark_color;
+                        background-color: darken($my_portfolio_body_background_color,15%) !important;
+                    }
+
+                    .navbar-close-button:hover{
+                        background-color: darken($my_portfolio_body_background_color,20%) !important;
+                    }
+                }
+
+                .user-accordion-item{
+                    border-bottom-color: lighten($my_portfolio_body_background_dark_color, 75%) !important;
+                    i{
+                        color: lighten($my_portfolio_body_background_dark_color, 5%) !important;
+                    }
+                    span{
+                        color: lighten($my_portfolio_body_background_dark_color, 10%) !important;
+                    }
+                }
+
+                .user-accordion-item:hover{
+                    background-color: darken($my_portfolio_body_background_color,20%) !important;
+                }
+                
+            }     
+           
+            .my-portfolio-toggler-button{
+                border-color: $my_portfolio_body_background_dark_color !important;
+            }
+
+        }
+
+        .my_portfolio_footer_front_end{
+            background-color: lighten($my_portfolio_body_background_dark_color, 10%);
+
+            .navbar-toggler{
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 30%))
+            }
+            .navbar-toggler:hover, .navbar-toggler:focus{
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 40%))
+            }
+
+           .navbar-brand , a, p{
+                color: set_text_color(lighten($my_portfolio_body_background_dark_color, 10%)) !important;
+            }
+
+            .nav-item:hover{
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 20%))
+            }
+
+            .navbar-brand:hover h4{
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 20%))
+            }
+
+            .navbar-brand.active h4{
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 20%))
+            }
+
+            .nav-item.disable-nav-item{
+                .nav-link{
+                    color: lighten($color:$my_portfolio_body_background_dark_color, $amount: 40%) !important;
+                }
+            }
+
+            .my_portfolio_section .dropdown-menu{
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 10%))
+            }
+
+            .my_portfolio_section .dropdown-menu .dropdown-item:hover{
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 20%))
+            }
+         }
+
+        //Slider
+        .my-portfolio-swiper-slide{       
+            background-color:$my_portfolio_main_background_dark_color;
+            .my-portfolio-slider-box{
+                .information{
+                    background-color: rgba($color: lighten($my_portfolio_body_background_dark_color, 80%), $alpha: 0.8);
+                    color: $my_portfolio_main_background_dark_color !important;
+                }
+            }
+        }
+
+        //Modal
+        .my-portfolio-modal-container{
+            background-color: rgba(255, 255, 255, 0.5);
+            .my-portfolio-modal-card{
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 10%));
+                border-color: lighten($my_portfolio_body_background_dark_color,40%);
+            }
+
+            .my-portfolio-close-button{
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 10%));
+                border-color: lighten($my_portfolio_body_background_dark_color,40%);
+            }
+
+            .my-portfolio-close-button:hover{
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 25%));
+                border-color: lighten($my_portfolio_body_background_dark_color,50%);
+            }
+        }
+
+        //Box Shadow
+        .box-shadow{
+            box-shadow: rgba(255, 255, 255, 0.07) 0px 1px 2px, rgba(255, 255, 255, 0.07) 0px 2px 4px, rgba(255, 255, 255, 0.07) 0px 4px 8px, rgba(255, 255, 255, 0.07) 0px 8px 16px, rgba(255, 255, 255, 0.07) 0px 16px 32px, rgba(255, 255, 255, 0.07) 0px 32px 64px;
+        }
+
+        //Box
+            .my_portfolio_box, .my-portfolio-card{
+                background-color: lighten($my_portfolio_body_background_dark_color,15%);
+            }
+
+            .my-portfolio-card{
+                background-color: $my_portfolio_body_background_dark_color;
+            }
+
+        //Border
+            .my_portfolio_border{
+                border: lighten($my_portfolio_body_background_dark_color,40%);
+            }
+
+        .customer-image-box{
+            filter: drop-shadow( -1px 3px 3px rgba(255, 255, 255, 0.5));
+        } 
+
+        //Line
+            .my_portfolio_line{
+                border-bottom: thin solid lighten($my_portfolio_body_background_dark_color,40%);
+            }
+
+         //Border
+            .my_portfolio_border{
+                border: thin solid lighten($my_portfolio_body_background_dark_color,20%);
+            }
+
+
+        //Avatar Background Image
+            .my-portfolio-image-background{
+                fill: $my_portfolio_body_background_dark_color;
+            }
+
+            .image-box-background{
+                background-color: lighten($my_portfolio_body_background_dark_color,40%);
+            }
+
+            .my-portfolio-card{
+                @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 10%));
+                border-color: lighten($my_portfolio_body_background_dark_color,40%);
+            }
+
+            .my-portfolio-ovelay{
+                background-color: $my_portfolio_blur_color;
+                .eye{
+                    color:$my_portfolio_button_text_color;
+                    .my-portfolio-tooltip{
+                        @include set_section_background_color(lighten($my_portfolio_body_background_dark_color, 10%));
+                        border-color: lighten($my_portfolio_body_background_dark_color,40%);
+                    }
+                    .my-portfolio-tooltip::after {
+                        border-color: lighten($my_portfolio_body_background_dark_color, 10%) transparent transparent transparent;
+                    }
+                }
+            }
+
+            .my-portfolio-border-bottom-color{
+                border-bottom-color: lighten($my_portfolio_body_background_dark_color,30%) !important;
+
+            }
+
+    }
+
+//Global Settings
+    .my-portfolio-button{
+        background-color: $my_portfolio_button_color;
+        color: $my_portfolio_button_text_color;
+        span{
+            color: lighten($my_portfolio_button_text_color,10%) !important;
+        }
+    }
+    .my-portfolio-button:hover{
+        background-color: $my_portfolio_button_color_hover;
+    }
+
+    //Blur
+    .blur{
+        color:$my_portfolio_blur_color;
+        cursor: pointer;
+    }
+
+    .blur:hover{
+        color: $my_portfolio_blur_hover_color;
+        .icon{
+            transform: scale(1.2);
+            margin-left: 0.5rem;
+        }
+    }
+
+    //Page
+
+    //muted
+    .muted{
+        color:$my_portfolio_blur_color !important;
+    }
+
+    .page-item-box, .side_bar_item_card{
+        .thumbnail:hover + .information{
+            .title{
+                color: red !important;
+            }
+        }
+        .information{
+          .title:hover{
+            color: red !important;
+          }
+        }
+    }
+
+    .side_bar_item_card{
+        .header:hover + .information{
+            .title{
+                color: red !important;
+            }
+        }
+        .information{
+          .title:hover{
+            color: red !important;
+          }
+        }
+    }
+
+
+
+
+
+
+   
+    
